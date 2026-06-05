@@ -164,9 +164,9 @@
 
                         <input type="number"
                                step="any"
-                               name="nilai_kuantititaf"
+                               name="nilai_kuantitatif"
                                class="form-control indata-input"
-                               value="{{ old('nilai_kuantititaf') }}"
+                               value="{{ old('nilai_kuantitatif') }}"
                                placeholder="Contoh: 100">
 
                         <small class="text-muted">

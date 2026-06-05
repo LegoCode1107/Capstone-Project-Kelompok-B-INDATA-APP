@@ -166,9 +166,9 @@
 
                         <input type="number"
                                step="any"
-                               name="nilai_kuantititaf"
+                               name="nilai_kuantitatif"
                                class="form-control indata-input"
-                               value="{{ old('nilai_kuantititaf', $data->nilai_kuantititaf) }}">
+                               value="{{ old('nilai_kuantitatif', $data->nilai_kuantitatif) }}">
 
                         <small class="text-muted">
                             Kosongkan jika menggunakan data kualitatif

@@ -127,7 +127,7 @@
 
                             <span class="indata-total-badge">
 
-                                @if($row->nilai_kuantititaf !== null)
+                                @if($row->nilai_kuantitatif !== null)
 
                                     @if(
                                         str_contains(strtolower($row->satuan), 'rupiah')
@@ -135,11 +135,11 @@
                                         str_contains(strtolower($row->satuan), 'rp')
                                     )
 
-                                        Rp {{ number_format($row->nilai_kuantititaf, 0, ',', '.') }}
+                                        Rp {{ number_format($row->nilai_kuantitatif, 0, ',', '.') }}
 
                                     @else
 
-                                        {{ number_format($row->nilai_kuantititaf) }}
+                                        {{ number_format($row->nilai_kuantitatif) }}
 
                                     @endif
 
