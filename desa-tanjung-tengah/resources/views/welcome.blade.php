@@ -328,7 +328,7 @@ Profil Desa
 
 <div class="col-lg-6">
 
-<img src="{{ asset('images/desa.jpg') }}"
+<img src="{{ asset('images/img3.jpg') }}"
      class="img-fluid rounded-4 shadow">
 
 </div>
