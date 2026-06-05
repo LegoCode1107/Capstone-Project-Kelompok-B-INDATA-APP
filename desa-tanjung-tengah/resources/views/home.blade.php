@@ -80,7 +80,7 @@
 </div>
 
 {{-- ===== CHART + FILTER ===== --}}
-<div class="row mb-4">
+{{-- <div class="row mb-4">
 
     <div class="col-lg-8 mb-4 mb-lg-0">
         <div class="indata-card h-100">
@@ -136,10 +136,10 @@
         </div>
     </div>
 
-</div>
+</div> --}}
 
 {{-- ===== TABEL DATA ===== --}}
-<div class="indata-card">
+{{-- <div class="indata-card">
     <div class="indata-card-head">
         <div class="indata-card-title">
             <div class="indata-card-icon-wrap">
@@ -191,7 +191,7 @@
             </table>
         </div>
     </div>
-</div>
+</div> --}}
 
 @stop
 

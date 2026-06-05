@@ -2,44 +2,46 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\KependudukanSosial;
+use App\Models\EkonomiPekerjaan;
 use App\Models\Infrastruktur;
+use App\Models\PerikananAset;
+use App\Models\ProduksiPangan;
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
-        $infrastruktur = Infrastruktur::latest()->get();
+        // Statistik
+        $totalKependudukan = KependudukanSosial::count();
+        $totalEkonomi      = EkonomiPekerjaan::count();
+        $totalInfrastruktur= Infrastruktur::count();
+        $totalPerikanan    = PerikananAset::count();
+        $totalProduksi     = ProduksiPangan::count();
 
-        $totalData = Infrastruktur::count();
+        // Data terbaru
+        $kependudukan = KependudukanSosial::latest()->take(5)->get();
+        $ekonomi      = EkonomiPekerjaan::latest()->take(5)->get();
+        $infrastruktur= Infrastruktur::latest()->take(5)->get();
+        $perikanan    = PerikananAset::latest()->take(5)->get();
+        $produksi     = ProduksiPangan::latest()->take(5)->get();
 
-        $totalSektor = Infrastruktur::select(
-            'sektor_fasilitas'
-        )->distinct()->count();
-
-        return view(
-            'dashboard',
-            compact(
-                'infrastruktur',
-                'totalData',
-                'totalSektor'
-            )
-        );
+        return view('dashboard', compact(
+            'totalKependudukan',
+            'totalEkonomi',
+            'totalInfrastruktur',
+            'totalPerikanan',
+            'totalProduksi',
+            'kependudukan',
+            'ekonomi',
+            'infrastruktur',
+            'perikanan',
+            'produksi'
+        ));
     }
-
 }
