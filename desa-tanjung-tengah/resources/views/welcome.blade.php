@@ -185,7 +185,7 @@
     <div class="container">
 
         <a class="navbar-brand" href="#">
-            <img src="{{ asset('images/logo-desa1.png') }}" width="40">
+            <img src="{{ asset('images/PPU.png') }}" width="40">
             Desa Tanjung Tengah
         </a>
 
@@ -260,7 +260,7 @@ Jelajahi Desa
 
 <div class="col-lg-6 text-center">
 
-<img src="{{ asset('images/logo-desa1.png') }}"
+<img src="{{ asset('images/PPU.png') }}"
      class="img-fluid floating-logo"
      width="300">
 
@@ -284,14 +284,14 @@ Statistik Desa
 
 <div class="col-md-3">
 <div class="stats-card">
-<h2>5.240</h2>
+<h2>2.706</h2>
 <p>Penduduk</p>
 </div>
 </div>
 
 <div class="col-md-3">
 <div class="stats-card">
-<h2>1.250</h2>
+<h2>785</h2>
 <p>KK</p>
 </div>
 </div>
@@ -486,9 +486,7 @@ Lokasi Desa
 
 <div class="ratio ratio-16x9">
 
-<iframe
-src="https://maps.google.com/maps?q=ngawi&t=&z=13&ie=UTF8&iwloc=&output=embed">
-</iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31909.159530691595!2d116.64420585405985!3d-1.389603410223051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2df116572d0bea67%3A0x3a1a01e2e6f01629!2sCentral%20Tanjung%2C%20Penajam%2C%20Penajam%20North%20Paser%20Regency%2C%20East%20Kalimantan!5e0!3m2!1sen!2sid!4v1780634565914!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div>
 
@@ -500,7 +498,7 @@ src="https://maps.google.com/maps?q=ngawi&t=&z=13&ie=UTF8&iwloc=&output=embed">
 
 <div class="container text-center">
 
-<img src="{{ asset('images/logo-desa1.png') }}"
+<img src="{{ asset('images/PPU.png') }}"
      width="80"
      class="mb-3">
 
@@ -513,7 +511,7 @@ Melayani dengan Cepat, Transparan dan Digital
 <hr>
 
 <p>
-© {{ date('Y') }} Pemerintah Desa Tanjung Tengah
+© {{ date('Y') }} Pemerintah Desa Tanjung Tengah Kelurahan Tanjung Tengah, Kecamatan Penajam, Kabupaten Penajam Paser Utara, Provinsi Kalimantan Timur, Kode Pos 76143
 </p>
 
 </div>

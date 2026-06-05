@@ -234,7 +234,7 @@ body{
         <div class="col-lg-7 info-section">
 
             <img
-                src="{{ asset('images/logo-desa1.png') }}"
+                src="{{ asset('images/PPU.png') }}"
                 class="logo-desa mb-4"
                 width="140">
 
@@ -260,7 +260,7 @@ body{
 
                         <i class="fas fa-users fa-3x mb-3"></i>
 
-                        <h3>1.250+</h3>
+                        <h3>2706+</h3>
 
                         <small>Penduduk</small>
 
@@ -274,7 +274,7 @@ body{
 
                         <i class="fas fa-home fa-3x mb-3"></i>
 
-                        <h3>350+</h3>
+                        <h3>785+</h3>
 
                         <small>Kepala Keluarga</small>
 
@@ -310,7 +310,7 @@ body{
                     <div class="text-center mb-4">
 
                         <img
-                            src="{{ asset('images/logo-desa1.png') }}"
+                            src="{{ asset('images/PPU.png') }}"
                             width="80"
                             class="logo-desa mb-3">
 

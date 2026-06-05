@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Infrastruktur;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $infrastruktur = Infrastruktur::latest()->get();
+
+        $totalData = Infrastruktur::count();
+
+        $totalSektor = Infrastruktur::select(
+            'sektor_fasilitas'
+        )->distinct()->count();
+
+        return view(
+            'dashboard',
+            compact(
+                'infrastruktur',
+                'totalData',
+                'totalSektor'
+            )
+        );
     }
+
 }
