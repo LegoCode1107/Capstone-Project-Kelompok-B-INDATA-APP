@@ -7,6 +7,8 @@ use App\Models\EkonomiPekerjaan;
 use App\Models\Infrastruktur;
 use App\Models\PerikananAset;
 use App\Models\ProduksiPangan;
+use App\Models\InfrastrukturApbdes;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -17,31 +19,53 @@ class HomeController extends Controller
 
     public function index()
     {
-        // Statistik
-        $totalKependudukan = KependudukanSosial::count();
-        $totalEkonomi      = EkonomiPekerjaan::count();
-        $totalInfrastruktur= Infrastruktur::count();
-        $totalPerikanan    = PerikananAset::count();
-        $totalProduksi     = ProduksiPangan::count();
+        // Infrastruktur
+        $totalInfrastruktur = Infrastruktur::count();
 
-        // Data terbaru
-        $kependudukan = KependudukanSosial::latest()->take(5)->get();
-        $ekonomi      = EkonomiPekerjaan::latest()->take(5)->get();
-        $infrastruktur= Infrastruktur::latest()->take(5)->get();
-        $perikanan    = PerikananAset::latest()->take(5)->get();
-        $produksi     = ProduksiPangan::latest()->take(5)->get();
+        // Kependudukan
+        $totalKependudukan = KependudukanSosial::count();
+
+        // Ekonomi
+        $totalEkonomi = EkonomiPekerjaan::count();
+
+        // Produksi Pangan
+        $totalPangan = ProduksiPangan::count();
+
+        // Perikanan
+        $totalPerikanan = PerikananAset::count();
+
+        // APBDes
+        $totalApbdes = InfrastrukturApbdes::count();
+
+        // User
+        $totalUser = User::count();
+
+        // Total seluruh data
+        $totalData =
+            $totalInfrastruktur +
+            $totalKependudukan +
+            $totalEkonomi +
+            $totalPangan +
+            $totalPerikanan +
+            $totalApbdes;
+
+        $grandTotalData =
+        $totalInfrastruktur +
+        $totalKependudukan +
+        $totalEkonomi +
+        $totalPangan +
+        $totalPerikanan;
 
         return view('dashboard', compact(
+            'totalData',
+            'totalInfrastruktur',
             'totalKependudukan',
             'totalEkonomi',
-            'totalInfrastruktur',
+            'totalPangan',
             'totalPerikanan',
-            'totalProduksi',
-            'kependudukan',
-            'ekonomi',
-            'infrastruktur',
-            'perikanan',
-            'produksi'
+            'totalApbdes',
+            'grandTotalData',
+            'totalUser'
         ));
     }
 }

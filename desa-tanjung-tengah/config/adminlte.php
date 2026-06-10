@@ -305,6 +305,11 @@ return [
         'route' => 'home',
         'icon' => 'fas fa-fw fa-tachometer-alt',
     ],
+    [
+        'text' => 'Data user',
+        'route' => 'users.index',
+        'icon' => 'fas fa-fw fa-users',
+    ],
 
     ['header' => 'DATA DESA'],
 

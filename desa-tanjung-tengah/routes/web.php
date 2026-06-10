@@ -8,6 +8,7 @@ use App\Http\Controllers\ExportsController;
 use App\Http\Controllers\ProduksiPanganController;
 use App\Http\Controllers\PerikananAsetController;
 use App\Http\Controllers\InfrastrukturApbdesController;
+use App\Http\Controllers\UserController;
 
 
 
@@ -39,6 +40,8 @@ Route::middleware('auth')->group(function () {
     )->name('dashboard');
 
 });
+
+Route::resource('users', UserController::class);
 
 Route::resource(
     'kependudukan',

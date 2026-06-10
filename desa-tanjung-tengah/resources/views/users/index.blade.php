@@ -71,7 +71,7 @@
                         <td>{{ $user->email }}</td>
 
                         <td>
-                            {{ $user->created_at->format('d M Y H:i') }}
+                            {{ $user->created_at}}
                         </td>
 
                         <td class="text-center">
